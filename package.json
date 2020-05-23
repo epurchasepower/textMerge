@@ -1,6 +1,6 @@
 {
     "name": "textMerge",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "Library method to merge template text with parameters, respecting pronouns and number",
     "main": "lib/index.js",
     "repository": "git@github.com:epurchasepower/textMerge.git",
@@ -10,10 +10,11 @@
         "index.js"
     ],
     "scripts": {
-        "build": "babel index.js --out-file lib/index.js"
+        "build": "babel index.js --presets=@babel/preset-env --out-file lib/index.js"
     },
     "devDependencies": {
         "@babel/cli": "^7.8.4",
-        "@babel/core": "^7.9.6"
+        "@babel/core": "^7.9.6",
+        "@babel/preset-env": "^7.9.6"
     }
 }
