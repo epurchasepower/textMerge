@@ -1,0 +1,10 @@
+{
+  "name": "textMerge",
+  "version": "1.0.0",
+  "description": "Library method to merge template text with parameters, respecting pronouns and number",
+  "main": "index.js",
+  "repository": "git@github.com:epurchasepower/textMerge.git",
+  "author": "<jjd314@gmail.com>",
+    "license": "MIT",
+    "files": ["index.js"]
+}
