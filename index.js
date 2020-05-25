@@ -1,3 +1,5 @@
+import numbro from 'numbro'
+
 const TERM_RE = /\[(\w+(\|\w+)?)\]/g
 const PRONOUNS = {
   he: {
@@ -24,12 +26,11 @@ const PRONOUNS = {
  * Someday we'll allow the user to pass in a locale, and we'll have
  *  style options keyed by part of the merge term, like [value:currency]
  *  or [value:scientific].
- * For now, everyone is US, with commas and 3 significant digits
+ * For now, everyone is US, with commas and 2 digits after the decimal point
  */
-const defaultFormatter = new Intl.NumberFormat('en-US', { maximumSignificantDigits: 3 })
 
 const formatNumber = (val) =>
-  defaultFormatter.format(val)
+  numbro(val).format({thousandSeparated: true, mantissa: 2, optionalMantissa: true})
 
 export default (template, terms, preferredPronoun) => {
   let result = ''

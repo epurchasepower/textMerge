@@ -1,6 +1,6 @@
 {
     "name": "textMerge",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "description": "Library method to merge template text with parameters, respecting pronouns and number",
     "main": "lib/index.js",
     "repository": "git@github.com:epurchasepower/textMerge.git",
@@ -16,5 +16,8 @@
         "@babel/cli": "^7.8.4",
         "@babel/core": "^7.9.6",
         "@babel/preset-env": "^7.9.6"
+    },
+    "dependencies": {
+        "numbro": "^2.2.0"
     }
 }
