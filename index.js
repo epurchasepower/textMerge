@@ -45,7 +45,10 @@ export default (template, terms, preferredPronoun) => {
 
   while ((match = TERM_RE.exec(template)) !== null) {
     result += template.substring(lastIndex, match.index)
-    const term = match[1].toLowerCase()
+    const term = match[1].charAt(0).toLowerCase() + match[1].substring(1)
+    if (!(term in terms)) {
+      term = match[1]
+    }
     let val
     let index
     if (term in terms) {
