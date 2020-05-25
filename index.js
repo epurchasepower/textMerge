@@ -20,6 +20,17 @@ const PRONOUNS = {
   },
 }
 
+/*
+ * Someday we'll allow the user to pass in a locale, and we'll have
+ *  style options keyed by part of the merge term, like [value:currency]
+ *  or [value:scientific].
+ * For now, everyone is US, with commas and 3 significant digits
+ */
+const defaultFormatter = new Intl.NumberFormat('en-US', { maximumSignificantDigits: 3 })
+
+const formatNumber = (val) =>
+  defaultFormatter.format(val)
+
 export default (template, terms, preferredPronoun) => {
   let result = ''
   let lastIndex = 0
@@ -47,7 +58,9 @@ export default (template, terms, preferredPronoun) => {
     } else {
       val = match[0]
     }
-    if (term !== match[1]) {
+    if (typeof val === 'number') {
+      val = formatNumber(val)
+    } else if (term !== match[1]) {
       val = val.charAt(0).toUpperCase() + val.slice(1)
     }
     result += val
