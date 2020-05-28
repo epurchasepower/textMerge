@@ -1,6 +1,6 @@
 import numbro from 'numbro'
 
-const TERM_RE = /\[(\w+(\|\w+)?)\]/g
+const TERM_RE = /\[(\w+(\/\w+)?)\]/g
 const PRONOUNS = {
   he: {
     they: 'he',
@@ -53,7 +53,7 @@ export default (template, terms, preferredPronoun) => {
     let index
     if (term in terms) {
       val = terms[term]
-    } else if (preferredPronoun && (index = term.indexOf('|')) > 0) {
+    } else if (preferredPronoun && (index = term.indexOf('/')) > 0) {
       if (preferredPronoun === 'they') {
         val = term.substring(0, index)
       } else {
