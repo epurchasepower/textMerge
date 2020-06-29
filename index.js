@@ -20,6 +20,12 @@ const PRONOUNS = {
     their: 'their',
     theirs: 'theirs',
   },
+  we: {
+    they: 'we',
+    them: 'us',
+    their: 'our',
+    theirs: 'ours',
+  },
 }
 
 /*
@@ -54,7 +60,7 @@ export default (template, terms, preferredPronoun) => {
     if (term in terms) {
       val = terms[term]
     } else if (preferredPronoun && (index = term.indexOf('/')) > 0) {
-      if (preferredPronoun === 'they') {
+      if (preferredPronoun === 'they' || preferredPronoun === 'we') {
         val = term.substring(0, index)
       } else {
         val = term.substring(index + 1)
