@@ -7,24 +7,28 @@ const PRONOUNS = {
     them: 'him',
     their: 'his',
     theirs: 'his',
+    themselves: 'himself',
   },
   she: {
     they: 'she',
     them: 'her',
     their: 'her',
     theirs: 'hers',
+    themselves: 'herself',
   },
   they: {
     they: 'they',
     them: 'them',
     their: 'their',
     theirs: 'theirs',
+    themselves: 'themselves',
   },
   we: {
     they: 'we',
     them: 'us',
     their: 'our',
     theirs: 'ours',
+    themselves: 'ourselves',
   },
 }
 
