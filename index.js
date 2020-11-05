@@ -2,6 +2,13 @@ import numbro from 'numbro'
 
 const TERM_RE = /\[(\w+(\/\w+)?)\]/g
 const PRONOUNS = {
+  i: {
+    they: 'I',
+    them: 'me',
+    their: 'my',
+    theirs: 'mine',
+    themselves: 'myself',
+  },
   he: {
     they: 'he',
     them: 'him',
