@@ -49,7 +49,7 @@ const PRONOUNS = {
 const formatNumber = (val) =>
   numbro(val).format({thousandSeparated: true, mantissa: 2, optionalMantissa: true})
 
-export default (template, terms, preferredPronoun) => {
+export default (template, terms, preferredPronoun,missing) => {
   let result = ''
   let lastIndex = 0
   let match
@@ -78,6 +78,9 @@ export default (template, terms, preferredPronoun) => {
       }
     } else {
       val = match[0]
+        if (missing){
+        missing.push(term)
+      }
     }
     if (typeof val === 'number') {
       val = formatNumber(val)
