@@ -2,22 +2,22 @@
     "name": "textMerge",
     "version": "1.0.11",
     "description": "Library method to merge template text with parameters, respecting pronouns and number",
-    "main": "./dist/index.cjs",
-    "module": "./dist/index.mjs",
+    "main": "./lib/index.cjs",
+    "module": "./lib/index.mjs",
     "type": "module",
     "exports": {
         "require": {
-        "default": "./dist/index.cjs"
+        "default": "./lib/index.cjs"
         },
         "import": {
-        "default": "./dist/index.mjs"
+        "default": "./lib/index.mjs"
         }
     },
     "repository": "git@github.com:epurchasepower/textMerge.git",
     "author": "<jjd314@gmail.com>",
     "license": "MIT",
     "scripts": {
-        "build": "pkgroll --sourcemap"
+        "build": "pkgroll --sourcemap --dist lib"
     },
     "devDependencies": {
         "@babel/cli": "^7.8.4",
