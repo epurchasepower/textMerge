@@ -62,7 +62,7 @@ export default (template, terms, preferredPronoun,missing) => {
 
   while ((match = TERM_RE.exec(template)) !== null) {
     result += template.substring(lastIndex, match.index)
-    const term = match[1].charAt(0).toLowerCase() + match[1].substring(1)
+    let term = match[1].charAt(0).toLowerCase() + match[1].substring(1)
     if (!(term in terms)) {
       term = match[1]
     }
