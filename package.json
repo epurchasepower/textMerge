@@ -7,10 +7,10 @@
     "type": "module",
     "exports": {
         "require": {
-        "default": "./lib/index.cjs"
+            "default": "./lib/index.cjs"
         },
         "import": {
-        "default": "./lib/index.mjs"
+            "default": "./lib/index.mjs"
         }
     },
     "repository": "git@github.com:epurchasepower/textMerge.git",
@@ -23,6 +23,7 @@
         "@babel/cli": "^7.8.4",
         "@babel/core": "^7.9.6",
         "@babel/preset-env": "^7.9.6",
+        "lefthook": "^1.10.11",
         "pkgroll": "^2.10.0"
     },
     "dependencies": {
